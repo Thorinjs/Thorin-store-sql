@@ -102,6 +102,7 @@ module.exports = function init(thorin) {
         if(err) {
           return done(thorin.error('SQL.INITIALIZATION', 'Could not initialize store.', err));
         }
+        thorin.logger(this.name).info('Connected to SQL server');
         done();
       });
     }
@@ -111,15 +112,14 @@ module.exports = function init(thorin) {
     * when the app is run with --setup=store.sql
     * */
     setup(done) {
-      function doLog(msg) {
-        console.log("SETUP: " + msg);
-      }
+      this.settingUp = true;
+      var log = thorin.logger(this.name);
       this.run((e) => {
         if(e) return done(e);
         let seqObj = this.getInstance(),
           opt = {
             force: true,
-            logging: doLog
+            logging: this._log.bind(this)
           };
         let calls = [];
         // Disable foreign key checks
@@ -160,12 +160,7 @@ module.exports = function init(thorin) {
         // apply any patches.
         calls.push(() => {
           if(!this[config].path.patch) return;
-          var patchFiles;
-          try {
-            patchFiles = thorin.util.readDirectory(this[config].path.patch, 'sql');
-          } catch(e) {
-            return;
-          }
+          var patchFiles = thorin.util.readDirectory(this[config].path.patch, 'sql');
           if(patchFiles.length === 0) return;
           let queries = [];
           patchFiles.forEach((fpath) => {
@@ -173,7 +168,7 @@ module.exports = function init(thorin) {
             try {
               queryContent = fs.readFileSync(fpath, { encoding: 'utf8' });
             } catch(e) {
-              doLog("Thorin.store.sql: failed to load sql patch file: " + fpath);
+              this._log("Thorin.store.sql: failed to load sql patch file: " + fpath);
               return;
             }
             if(queryContent.trim() === '') return;
@@ -197,7 +192,8 @@ module.exports = function init(thorin) {
           if(e) {
             return done(e);
           }
-          doLog("Thorin.store.sql setup complete.");
+          this._log("Setup complete.");
+          this.settingUp = false;
           done();
         });
       });
@@ -266,9 +262,19 @@ module.exports = function init(thorin) {
     * Handles sequelize logs.
     * */
     _log(msg) {
-      console.log(msg);
+      if(this.settingUp) {
+        msg = 'setup: ' + msg;
+      }
+      if(this[config].debug === false) return;  // no debug.
+      if(this[config].debug === true) { // debug all
+        thorin.logger(this.name).debug(msg);
+      }
+      if(this[config].debug.create === false && msg.indexOf('INSERT ') !== -1) return;
+      if(this[config].debug.read === false && msg.indexOf('SELECT ') !== -1) return;
+      if(this[config].debug.update === false && msg.indexOf('UPDATE ') !== -1) return;
+      if(this[config].debug.delete === false && msg.indexOf('DELETE ') !== -1) return;
+      thorin.logger(this.name).debug(msg);
     }
-
   }
 
   return ThorinSqlStore;
