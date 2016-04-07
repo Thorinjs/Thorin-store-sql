@@ -3,6 +3,8 @@ const async = require('async'),
   path = require('path'),
   fs = require('fs'),
   componentLoader = require('./lib/loader'),
+  restifyInit = require('./lib/restifyModel'),
+  restifyActionInit = require('./lib/restifyAction'),
   Sequelize = require('sequelize');
 require('./lib/customTypes');
 /**
@@ -19,7 +21,9 @@ module.exports = function init(thorin) {
     models = Symbol(),
     loaded = Symbol(),
     seq = Symbol();
-  const loader = componentLoader(thorin);
+  const loader = componentLoader(thorin),
+    restify = restifyInit(thorin),
+    RestifyAction = restifyActionInit(thorin);
 
   class ThorinSqlStore extends thorin.Interface.Store {
     static publicName() { return "sql"; }
@@ -70,7 +74,6 @@ module.exports = function init(thorin) {
         loader.load(this, modelPath, this[models]);
       });
     }
-
 
     /*
      * Connect to SQL and initialize the connection.
@@ -216,8 +219,9 @@ module.exports = function init(thorin) {
     /*
     * Returns a custom SQL model by its code.
     * */
-    model(name) {
+    model(name, forceReturnModel) {
       if(!this[models][name]) return null;
+      if(forceReturnModel === true) return this[models][name];
       return this[models][name].getInstance();
     }
 
@@ -256,6 +260,56 @@ module.exports = function init(thorin) {
         }
       }
       return this;
+    }
+
+    /*
+    * The restify function will attach CREATE, READ, FIND, UPDATE, DELETE
+    * on the given model name.
+    * Arguments:
+    *   modelName - the model name we want to restify.
+    *   actions - the actions we want to attach. Defaults to all.
+    *   options - additional options to pass.
+    *     -namespace: if we want to use a different action namespace, other than the default "db" one.
+    * */
+    restify(modelName, actions, opt) {
+      const modelObj = this.model(modelName);
+      if(!modelObj) {
+        console.error(thorin.error('SQL.RESTIFY', 'SQL model ' + modelName + ' not found for restify()'));
+        return this;
+      }
+      if(typeof actions === 'string') {
+        actions = actions.split(' ');
+      }
+      if(!(actions instanceof Array)) {
+        opt = actions;
+        actions = ['create', 'read', 'find', 'update', 'delete'];
+      }
+      if(typeof opt !== 'object' || !opt) opt = {};
+      const actionObj = new RestifyAction(modelObj);
+      // once the db is ready, we create the action.
+      thorin.on(thorin.EVENT.RUN, 'store.' + this.name, () => {
+        process.nextTick(() => {
+          actions.forEach((name) => {
+            if(typeof restify[name] !== 'function') {
+              console.error(thorin.error('SQL.RESTIFY', 'Restify action ' + name + ' is not valid for model ' + modelName));
+              return;
+            }
+            let dbAction = restify[name].call(this, actionObj, opt);
+            if(dbAction) {
+              let logMsg = 'Restifying "' + name + '" for model ' + modelName + ' on (' + dbAction.name + ')',
+                aliases = [];
+              if(dbAction.aliases) {
+                dbAction.aliases.forEach((item) => {
+                  aliases.push(item.verb + ' ' + item.name);
+                });
+                logMsg += " [" + aliases.join(',') + ']';
+              }
+              this._log(logMsg);
+            }
+          });
+        });
+      });
+      return actionObj;
     }
 
     /*
