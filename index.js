@@ -29,6 +29,7 @@ module.exports = function init(thorin) {
     static publicName() { return "sql"; }
     constructor() {
       super();
+      this.type = "sql";
       this[loaded] = false;
       this[config] = {};
       this[models] = {};  // hash of modelName:modelObj
