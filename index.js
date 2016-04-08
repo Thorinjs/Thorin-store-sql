@@ -269,7 +269,8 @@ module.exports = function init(thorin) {
     *   modelName - the model name we want to restify.
     *   actions - the actions we want to attach. Defaults to all.
     *   options - additional options to pass.
-    *     -namespace: if we want to use a different action namespace, other than the default "db" one.
+    *     - namespace=db: if we want to use a different action namespace, other than the default "db" one.
+    *     - debug=false: should we log the Restify model action
     * */
     restify(modelName, actions, opt) {
       const modelObj = this.model(modelName);
@@ -304,7 +305,9 @@ module.exports = function init(thorin) {
                 });
                 logMsg += " [" + aliases.join(',') + ']';
               }
-              this._log(logMsg);
+              if(opt.debug === true) {
+                this._log(logMsg);
+              }
             }
           });
         });
