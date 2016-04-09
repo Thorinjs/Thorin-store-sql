@@ -58,7 +58,7 @@ module.exports = function init(thorin) {
         database: null,
         path: {
           models: path.normalize(thorin.root + '/app/models'),   // the store model definition folder
-          patch: path.normalize(thorin.root + '/app/models/patch') // the store sql patcher.
+          patch: path.normalize(thorin.root + '/app/models/patch') // the store sql files that will be executed.
         },
         options: {  // sequelize options
           dialect: 'mysql',
@@ -74,6 +74,10 @@ module.exports = function init(thorin) {
       this[config].path.models.forEach((modelPath) => {
         loader.load(this, modelPath, this[models]);
       });
+      let fse = thorin.util.fse;
+      try {
+        fse.ensureDirSync(this[config].path.models);
+      } catch(e) {}
     }
 
     /*
