@@ -1,9 +1,8 @@
 {
   "name": "thorin-store-sql",
   "author": "Stiudeo",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "dependencies": {
-    "async": "^1.4.2",
     "camelcase": "^2.1.1",
     "decamelize": "^1.2.0",
     "mysql": "^2.10.2",

@@ -1,6 +1,5 @@
 'use strict';
-const async = require('async'),
-  path = require('path'),
+const path = require('path'),
   fs = require('fs'),
   componentLoader = require('./lib/loader'),
   restifyInit = require('./lib/restifyModel'),
@@ -14,6 +13,7 @@ require('./lib/customTypes');
  *  - disconnect({name})
  */
 module.exports = function init(thorin) {
+  const async = thorin.util.async;
   // Attach the SQL error parser to thorin.
   thorin.addErrorParser(require('./lib/errorParser'));
 
