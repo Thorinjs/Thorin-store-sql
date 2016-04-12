@@ -328,7 +328,9 @@ module.exports = function init(thorin) {
                 });
                 logMsg += " [" + aliases.join(',') + ']';
               }
-              if(opt.debug === true) {
+              if(thorin.env === 'production' && opt.debug === true) {
+                this._log(logMsg);
+              } else if(thorin.env === 'development' && opt.debug !== false) {
                 this._log(logMsg);
               }
             }
