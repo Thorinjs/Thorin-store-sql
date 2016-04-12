@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path'),
+  decamelize = require('decamelize'),
   fs = require('fs'),
   componentLoader = require('./lib/loader'),
   restifyInit = require('./lib/restifyModel'),
@@ -34,6 +35,11 @@ module.exports = function init(thorin) {
       this[config] = {};
       this[models] = {};  // hash of modelName:modelObj
       this[seq] = null;
+    }
+
+    /* Returns the sequelize class. */
+    getSequelize() {
+      return Sequelize;
     }
 
     /* Returns the sequelize instance */
@@ -210,15 +216,27 @@ module.exports = function init(thorin) {
     /*
     * Manually perform a sync() with sequelize.
     * The argument options are the ones passed to sync()
+    * NOTE:
+    *   - calling sync()  will sync entire db
+    *   - calling sync(modelName, opt) will sync specific model
     * */
-    sync(opt) {
+    sync(opt, b) {
       let seqObj = this.getInstance();
       if(!seqObj) {
         return new Promise((resolve, reject) => {
           reject(thorin.error('SQL.NOT_CONNECTED', 'Connection is not active.'));
         });
       }
-      return seqObj.sync(opt);
+      // sync the entire DB
+      if(typeof opt !== 'string') {
+        return seqObj.sync(opt);
+      }
+      //IF we have a specific model to sync, we can do so.
+      if(typeof opt === 'string' && opt) {    // Try to sink a specific model
+        let modelName = opt;
+        return this.model(modelName).sync(b);
+      }
+      return this;
     }
 
     /*
@@ -336,6 +354,13 @@ module.exports = function init(thorin) {
       if(this[config].debug.update === false && msg.indexOf('UPDATE ') !== -1) return;
       if(this[config].debug.delete === false && msg.indexOf('DELETE ') !== -1) return;
       thorin.logger(this.name).debug(msg);
+    }
+
+    /*
+    * ------------ HELPER FUNCTIONS
+    * */
+    decamelize(r) {
+      return decamelize(r, '_');
     }
   }
 
