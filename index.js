@@ -319,7 +319,14 @@ module.exports = function init(thorin) {
               return;
             }
             let dbAction = restify[name].call(this, actionObj, opt);
-            if(dbAction) {
+            if(!dbAction) {
+              console.warn(thorin.error('SQL.RESTIFY', 'Restify action ' + name + ' could not complete.'));
+              return;
+            }
+            let self = this;
+            function onActionRegistered(newActionObj) {
+              if(newActionObj.name !== dbAction.name) return;
+              thorin.dispatcher.removeListener('action', onActionRegistered);
               let logMsg = 'Restifying "' + name + '" for model ' + modelName + ' on (' + dbAction.name + ')',
                 aliases = [];
               if(dbAction.aliases) {
@@ -329,11 +336,13 @@ module.exports = function init(thorin) {
                 logMsg += " [" + aliases.join(',') + ']';
               }
               if(thorin.env === 'production' && opt.debug === true) {
-                this._log(logMsg);
+                self._log(logMsg);
               } else if(thorin.env === 'development' && opt.debug !== false) {
-                this._log(logMsg);
+                self._log(logMsg);
               }
             }
+            thorin.dispatcher.on('action', onActionRegistered);
+            thorin.dispatcher.addAction(dbAction);
           });
         });
       });
