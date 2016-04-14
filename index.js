@@ -293,7 +293,7 @@ module.exports = function init(thorin) {
     *   actions - the actions we want to attach. Defaults to all.
     *   options - additional options to pass.
     *     - name: the model code we want to use. Default to modelObj.code
-    *     - namespace=db: if we want to use a different action namespace, other than the default "db" one.
+    *     - namespace=store: if we want to use a different action namespace, other than the default "store" one.
     *     - debug=false: should we log the Restify model action
     * */
     restify(modelName, actions, opt) {
