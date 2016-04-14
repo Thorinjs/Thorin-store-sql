@@ -292,6 +292,7 @@ module.exports = function init(thorin) {
     *   modelName - the model name we want to restify.
     *   actions - the actions we want to attach. Defaults to all.
     *   options - additional options to pass.
+    *     - name: the model code we want to use. Default to modelObj.code
     *     - namespace=db: if we want to use a different action namespace, other than the default "db" one.
     *     - debug=false: should we log the Restify model action
     * */
@@ -309,6 +310,9 @@ module.exports = function init(thorin) {
         actions = ['create', 'read', 'find', 'update', 'delete'];
       }
       if(typeof opt !== 'object' || !opt) opt = {};
+      if(!opt.name) {
+        opt.name = modelObj.code;
+      }
       const actionObj = new RestifyAction(modelObj);
       // once the db is ready, we create the action.
       thorin.on(thorin.EVENT.RUN, 'store.' + this.name, () => {
