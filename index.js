@@ -91,7 +91,7 @@ module.exports = function init(thorin) {
      * */
     run(done) {
       if(this[seq]) return done();  // already initialized.
-      if(!this[config].user || !this[config].password || !this[config].database) {
+      if(this[config].user == null || this[config].password == null || !this[config].database) {
         return done(thorin.error('SQL.CREDENTIALS', 'Missing user, password or database credentials.'));
       }
       let opt = this[config].options;
