@@ -56,7 +56,8 @@ module.exports = function init(thorin) {
           create: true,
           read: true,
           update: true,
-          delete: true
+          delete: true,
+          restify: true
         },
         host: 'localhost',
         user: null,
@@ -297,7 +298,8 @@ module.exports = function init(thorin) {
     *     - debug=false: should we log the Restify model action
     * */
     restify(modelName, actions, opt) {
-      const modelObj = this.model(modelName);
+      const modelObj = this.model(modelName),
+        restifyDebug = this[config].debug.restify;
       if(!modelObj) {
         console.error(thorin.error('SQL.RESTIFY', 'SQL model ' + modelName + ' not found for restify()'));
         return this;
@@ -339,9 +341,9 @@ module.exports = function init(thorin) {
                 });
                 logMsg += " [" + aliases.join(',') + ']';
               }
-              if(thorin.env === 'production' && opt.debug === true) {
+              if(restifyDebug) {
                 self._log(logMsg);
-              } else if(thorin.env === 'development' && opt.debug !== false) {
+              } else if(thorin.env === 'production' && opt.debug === true) {
                 self._log(logMsg);
               }
             }
