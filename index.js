@@ -383,3 +383,4 @@ module.exports = function init(thorin) {
 
   return ThorinSqlStore;
 };
+module.exports.publicName = 'sql';
