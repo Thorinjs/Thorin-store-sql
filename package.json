@@ -1,7 +1,7 @@
 {
   "name": "thorin-store-sql",
   "author": "Stiudeo",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "dependencies": {
     "camelcase": "^2.1.1",
     "camelize": "^1.0.0",
@@ -14,10 +14,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Stiudeo/Thorin-store-sql"
+    "url": "https://github.com/Thorinjs/Thorin-store-sql"
   },
   "homepage": "http://thorinjs.com",
   "bugs": {
-    "url": "https://github.com/Stiudeo/Thorin-store-sql/issues"
+    "url": "https://github.com/Thorinjs/Thorin-store-sql/issues"
   }
 }
