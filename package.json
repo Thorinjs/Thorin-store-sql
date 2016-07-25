@@ -1,7 +1,7 @@
 {
   "name": "thorin-store-sql",
   "author": "Stiudeo",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "dependencies": {
     "camelcase": "^2.1.1",
     "camelize": "^1.0.0",
