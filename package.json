@@ -1,13 +1,13 @@
 {
   "name": "thorin-store-sql",
   "author": "Stiudeo",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "dependencies": {
-    "camelcase": "^2.1.1",
-    "camelize": "^1.0.0",
-    "decamelize": "^1.2.0",
-    "mysql": "^2.10.2",
-    "sequelize": "^3.23.x"
+    "camelcase": "3.0.0",
+    "camelize": "1.0.0",
+    "decamelize": "1.2.0",
+    "mysql": "2.11.1",
+    "sequelize": "3.23.6"
   },
   "description": "Thorin.js sql store",
   "main": "index.js",
