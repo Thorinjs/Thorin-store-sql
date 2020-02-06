@@ -1,12 +1,12 @@
 {
   "name": "thorin-store-sql",
   "author": "UNLOQ Systems",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "dependencies": {
     "camelcase": "5.3.1",
     "camelize": "1.0.0",
     "decamelize": "3.2.0",
-    "mysql2": "1.7.0",
+    "mysql2": "2.1.0",
     "sequelize": "5.21.3"
   },
   "description": "Thorin.js sql store",
