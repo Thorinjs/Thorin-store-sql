@@ -1,22 +1,13 @@
 {
   "name": "thorin-store-sql",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
-    "@babel/runtime-corejs2": {
-      "version": "7.6.2",
-      "resolved": "https://registry.npmjs.org/@babel/runtime-corejs2/-/runtime-corejs2-7.6.2.tgz",
-      "integrity": "sha512-wdyVKnTv9Be4YlwF/7pByYNfcl23qC21aAQ0aIaZOo2ZOvhFEyJdBLJClYZ9i+Pmrz7sUQgg/MwbJa2RZTkygg==",
-      "requires": {
-        "core-js": "^2.6.5",
-        "regenerator-runtime": "^0.13.2"
-      }
-    },
     "@types/node": {
-      "version": "13.1.8",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-13.1.8.tgz",
-      "integrity": "sha512-6XzyyNM9EKQW4HKuzbo/CkOIjn/evtCmsU+MUM1xDfJ+3/rNjBttM1NgN7AOQvN6tP1Sl1D1PIKMreTArnxM9A=="
+      "version": "13.7.1",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-13.7.1.tgz",
+      "integrity": "sha512-Zq8gcQGmn4txQEJeiXo/KiLpon8TzAl0kmKH4zdWctPj05nWwp1ClMdAVEloqrQKfaC48PNLdgN/aVaLqUrluA=="
     },
     "ansicolors": {
       "version": "0.3.2",
@@ -61,11 +52,6 @@
         "shimmer": "^1.1.0"
       }
     },
-    "core-js": {
-      "version": "2.6.9",
-      "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.6.9.tgz",
-      "integrity": "sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A=="
-    },
     "debug": {
       "version": "4.1.1",
       "resolved": "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz",
@@ -75,12 +61,9 @@
       }
     },
     "decamelize": {
-      "version": "3.2.0",
-      "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-3.2.0.tgz",
-      "integrity": "sha512-4TgkVUsmmu7oCSyGBm5FvfMoACuoh9EOidm7V5/J2X2djAwwt57qb3F2KMP2ITqODTCSwb+YRV+0Zqrv18k/hw==",
-      "requires": {
-        "xregexp": "^4.2.4"
-      }
+      "version": "4.0.0",
+      "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-4.0.0.tgz",
+      "integrity": "sha512-9iE1PgSik9HeIIw2JO94IidnE3eBoQrFJ3w7sFuzSX4DpmZ3v5sZpUiV5Swcf6mQEF+Y0ru8Neo+p+nyh2J+hQ=="
     },
     "denque": {
       "version": "1.4.1",
@@ -217,11 +200,6 @@
         "esprima": "~4.0.0"
       }
     },
-    "regenerator-runtime": {
-      "version": "0.13.3",
-      "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz",
-      "integrity": "sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw=="
-    },
     "retry-as-promised": {
       "version": "3.2.0",
       "resolved": "https://registry.npmjs.org/retry-as-promised/-/retry-as-promised-3.2.0.tgz",
@@ -246,9 +224,9 @@
       "integrity": "sha1-1WgS4cAXpuTnw+Ojeh2m143TyT4="
     },
     "sequelize": {
-      "version": "5.21.3",
-      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-5.21.3.tgz",
-      "integrity": "sha512-ptdeAxwTY0zbj7AK8m+SH3z52uHVrt/qmOTSIGo/kyfnSp3h5HeKlywkJf5GEk09kuRrPHfWARVSXH1W3IGU7g==",
+      "version": "5.21.4",
+      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-5.21.4.tgz",
+      "integrity": "sha512-Ap1pZpvKb0o3H1HuBygMi9LfCJnwYLkXNBoISqkMJ17X6MbXuOB0Pz+XazawodU1uaMl9osCSrP+Uklkc6pgQg==",
       "requires": {
         "bluebird": "^3.5.0",
         "cls-bluebird": "^2.1.0",
@@ -303,14 +281,6 @@
       "integrity": "sha512-ikPXMM9IR/gy/LwiOSqWlSL3X/J5uk9EO2hHNRXS41eTLXaUFEVw9fn/593jW/tE5tedNg8YjT5HkCa4FqQZyQ==",
       "requires": {
         "@types/node": "*"
-      }
-    },
-    "xregexp": {
-      "version": "4.2.4",
-      "resolved": "https://registry.npmjs.org/xregexp/-/xregexp-4.2.4.tgz",
-      "integrity": "sha512-sO0bYdYeJAJBcJA8g7MJJX7UrOZIfJPd8U2SC7B2Dd/J24U0aQNoGp33shCaBSWeb0rD5rh6VBUIXOkGal1TZA==",
-      "requires": {
-        "@babel/runtime-corejs2": "^7.2.0"
       }
     },
     "yallist": {
