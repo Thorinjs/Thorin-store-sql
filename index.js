@@ -1,6 +1,6 @@
 'use strict';
-const storeInit = require('./lib/sqlStore'),
-  typesInit = require('./lib/customTypes');
+const initStore = require('./lib/sqlStore'),
+  initTypes = require('./lib/customTypes');
 /**
  * Created by Adrian on 29-Mar-16.
  * Events:
@@ -8,14 +8,13 @@ const storeInit = require('./lib/sqlStore'),
  *  - disconnect({name})
  *  NOTE:
  *  - in order to extend a model added by a plugin, you can simply create the models/tableName.js file in your app, and
- *  module.exports = function extend(modelObj, Seq) {}  // you MUST name your exported function "extend", in order to extend an object.
+ *  module.exports = function extend(modelObj, Seq) {}   // you MUST name your exported function "extend", in order to extend an object.
  */
 module.exports = function init(thorin, opt) {
-  typesInit(thorin);
-  const async = thorin.util.async;
+  initTypes(thorin);
   // Attach the SQL error parser to thorin.
   thorin.addErrorParser(require('./lib/errorParser'));
-  const ThorinSqlStore = storeInit(thorin, opt);
+  const ThorinSqlStore = initStore(thorin, opt);
 
   return ThorinSqlStore;
 };
