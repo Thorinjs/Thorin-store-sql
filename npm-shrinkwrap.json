@@ -1,19 +1,19 @@
 {
   "name": "thorin-store-sql",
-  "version": "2.2.7",
+  "version": "2.2.10",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "thorin-store-sql",
-      "version": "2.2.7",
+      "version": "2.2.10",
       "license": "MIT",
       "dependencies": {
         "camelcase": "6.2.0",
         "camelize": "1.0.0",
         "decamelize": "4.0.0",
         "mysql2": "2.3.3",
-        "sequelize": "6.19.0"
+        "sequelize": "6.21.0"
       }
     },
     "node_modules/@types/debug": {
@@ -255,9 +255,9 @@
       "integrity": "sha1-1WgS4cAXpuTnw+Ojeh2m143TyT4="
     },
     "node_modules/sequelize": {
-      "version": "6.19.0",
-      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.19.0.tgz",
-      "integrity": "sha512-B3oGIdpYBERDjRDm74h7Ky67f6ZLcmBXOA7HscYObiOSo4pD7VBc9mtm44wNV7unc0uk8I1d30nbZBTQCE377A==",
+      "version": "6.21.0",
+      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.21.0.tgz",
+      "integrity": "sha512-QItP+QMoZL7KWaYtmRRb41sQ9Ua+dpWQbdREO4jYIUBg5hUfRiGq2i2/gAa25B84ft0EzDPY3UvCQS945ytNvA==",
       "funding": [
         {
           "type": "opencollective",
@@ -555,9 +555,9 @@
       "integrity": "sha1-1WgS4cAXpuTnw+Ojeh2m143TyT4="
     },
     "sequelize": {
-      "version": "6.19.0",
-      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.19.0.tgz",
-      "integrity": "sha512-B3oGIdpYBERDjRDm74h7Ky67f6ZLcmBXOA7HscYObiOSo4pD7VBc9mtm44wNV7unc0uk8I1d30nbZBTQCE377A==",
+      "version": "6.21.0",
+      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.21.0.tgz",
+      "integrity": "sha512-QItP+QMoZL7KWaYtmRRb41sQ9Ua+dpWQbdREO4jYIUBg5hUfRiGq2i2/gAa25B84ft0EzDPY3UvCQS945ytNvA==",
       "requires": {
         "@types/debug": "^4.1.7",
         "@types/validator": "^13.7.1",
