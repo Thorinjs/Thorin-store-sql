@@ -1,6 +1,6 @@
 {
   "name": "thorin-store-sql",
-  "version": "2.3.6",
+  "version": "2.3.7",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -84,7 +84,7 @@
     "is-property": {
       "version": "1.0.2",
       "resolved": "https://registry.npmjs.org/is-property/-/is-property-1.0.2.tgz",
-      "integrity": "sha1-V/4cTkhHTt1lsJkR8msc1Ald2oQ="
+      "integrity": "sha512-Ks/IoX00TtClbGQr4TWXemAnktAQvYB7HzcCxDGqEZU6oCmb2INHuOoKxbtR+HFkmYWBKv/dOZtGRiAjDhj92g=="
     },
     "lodash": {
       "version": "4.17.21",
@@ -92,9 +92,9 @@
       "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
     },
     "long": {
-      "version": "5.2.1",
-      "resolved": "https://registry.npmjs.org/long/-/long-5.2.1.tgz",
-      "integrity": "sha512-GKSNGeNAtw8IryjjkhZxuKB3JzlcLTwjtiQCHKvqQet81I93kXslhDQruGI/QsddO83mcDToBVy7GqGS/zYf/A=="
+      "version": "5.2.3",
+      "resolved": "https://registry.npmjs.org/long/-/long-5.2.3.tgz",
+      "integrity": "sha512-lcHwpNoggQTObv5apGNCTdJrO69eHOZMi4BNC+rTLER8iHAqGrUVeLh/irVIM7zTw2bOXA8T6uNPeujwOLg/2Q=="
     },
     "lru-cache": {
       "version": "6.0.0",
@@ -123,9 +123,9 @@
       "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
     },
     "mysql2": {
-      "version": "3.2.3",
-      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.2.3.tgz",
-      "integrity": "sha512-aethLO9cSAGba9gOXzNayuyq2GAVTKc3vwr+uETOX1yjUuH6MS6D5ewhUqkaukmtjzrb5C9ML7YmmmRBjQ3r3Q==",
+      "version": "3.5.1",
+      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.5.1.tgz",
+      "integrity": "sha512-RyaeUBqMiFR1ivk78JToPz0MhwN/sUWCKwPZszbXaFNZ6wmP/EJNPDU6gbZkF+qtLjr3sULQb0Y7JuFrNblnDg==",
       "requires": {
         "denque": "^2.1.0",
         "generate-function": "^2.3.1",
@@ -153,9 +153,9 @@
       },
       "dependencies": {
         "lru-cache": {
-          "version": "7.14.1",
-          "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-7.14.1.tgz",
-          "integrity": "sha512-ysxwsnTKdAx96aTRdhDOCQfDgbHnt8SK0KY8SEjO0wHinhWOFTESbjVCMPbU1uGXg/ch4lifqx0wfjOawU2+WA=="
+          "version": "7.18.3",
+          "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-7.18.3.tgz",
+          "integrity": "sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA=="
         }
       }
     },
@@ -185,7 +185,7 @@
     "seq-queue": {
       "version": "0.0.5",
       "resolved": "https://registry.npmjs.org/seq-queue/-/seq-queue-0.0.5.tgz",
-      "integrity": "sha1-1WgS4cAXpuTnw+Ojeh2m143TyT4="
+      "integrity": "sha512-hr3Wtp/GZIc/6DAGPDcV4/9WoZhjrkXsi5B/07QgX8tsdc6ilr7BFM6PM6rbdAX1kFSDYeZGLipIZZKyQP0O5Q=="
     },
     "sequelize": {
       "version": "6.32.1",
@@ -216,9 +216,9 @@
       "integrity": "sha512-G9c0qlIWQSK29pR/5U2JF5dDQeqqHRragoyahj/Nx4KOOQ3CPPfzxnfqFPCSB7x5UgjOgnZ61nSxz+fjDpRlJg=="
     },
     "sqlstring": {
-      "version": "2.3.2",
-      "resolved": "https://registry.npmjs.org/sqlstring/-/sqlstring-2.3.2.tgz",
-      "integrity": "sha512-vF4ZbYdKS8OnoJAWBmMxCQDkiEBkGQYU7UZPtL8flbDRSNkhaXvRJ279ZtI6M+zDaQovVU4tuRgzK5fVhvFAhg=="
+      "version": "2.3.3",
+      "resolved": "https://registry.npmjs.org/sqlstring/-/sqlstring-2.3.3.tgz",
+      "integrity": "sha512-qC9iz2FlN7DQl3+wjwn3802RTyjCx7sDvfQEXchwa6CWOx07/WVfh91gBmQ9fahw8snwGEWU3xGzOt4tFyHLxg=="
     },
     "toposort-class": {
       "version": "1.0.1",
