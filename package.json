@@ -1,7 +1,7 @@
 {
   "name": "thorin-store-sql",
   "author": "UNLOQ Systems",
-  "version": "2.3.17",
+  "version": "2.3.18",
   "dependencies": {
     "camelcase": "6.3.0",
     "camelize": "1.0.0",
