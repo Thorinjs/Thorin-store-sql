@@ -6,7 +6,7 @@
     "camelcase": "6.3.0",
     "camelize": "1.0.0",
     "decamelize": "4.0.0",
-    "mysql2": "3.10.2",
+    "mysql2": "3.11.3",
     "sequelize": "6.37.3"
   },
   "description": "Thorin.js sql store",
