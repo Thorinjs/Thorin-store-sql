@@ -7,7 +7,7 @@
     "camelize": "1.0.0",
     "decamelize": "1.2.0",
     "mysql": "2.18.1",
-    "sequelize": "3.35.1"
+    "sequelize": "6.3.5"
   },
   "description": "Thorin.js sql store",
   "main": "index.js",
