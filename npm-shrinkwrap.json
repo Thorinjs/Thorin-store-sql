@@ -1,19 +1,19 @@
 {
   "name": "thorin-store-sql",
-  "version": "2.3.36",
+  "version": "2.3.37",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "thorin-store-sql",
-      "version": "2.3.36",
+      "version": "2.3.37",
       "license": "MIT",
       "dependencies": {
         "camelcase": "6.3.0",
         "camelize": "1.0.0",
         "decamelize": "4.0.0",
         "mysql2": "^3.16.2",
-        "sequelize": "^6.37.7"
+        "sequelize": "^6.37.8"
       }
     },
     "node_modules/@types/debug": {
@@ -99,9 +99,10 @@
       }
     },
     "node_modules/dottie": {
-      "version": "2.0.6",
-      "resolved": "https://registry.npmjs.org/dottie/-/dottie-2.0.6.tgz",
-      "integrity": "sha512-iGCHkfUc5kFekGiqhe8B/mdaurD+lakO9txNnTvKtA6PISrw86LgqHvRzWYPyoE2Ph5aMIrCw9/uko6XHTKCwA=="
+      "version": "2.0.7",
+      "resolved": "https://registry.npmjs.org/dottie/-/dottie-2.0.7.tgz",
+      "integrity": "sha512-7lAK2A0b3zZr3UC5aE69CPdCFR4RHW1o2Dr74TqFykxkUCBXSRJum/yPc7g8zRHJqWKomPLHwFLLoUnn8PXXRg==",
+      "license": "MIT"
     },
     "node_modules/generate-function": {
       "version": "2.3.1",
@@ -270,15 +271,16 @@
       "integrity": "sha512-hr3Wtp/GZIc/6DAGPDcV4/9WoZhjrkXsi5B/07QgX8tsdc6ilr7BFM6PM6rbdAX1kFSDYeZGLipIZZKyQP0O5Q=="
     },
     "node_modules/sequelize": {
-      "version": "6.37.7",
-      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.37.7.tgz",
-      "integrity": "sha512-mCnh83zuz7kQxxJirtFD7q6Huy6liPanI67BSlbzSYgVNl5eXVdE2CN1FuAeZwG1SNpGsNRCV+bJAVVnykZAFA==",
+      "version": "6.37.8",
+      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.37.8.tgz",
+      "integrity": "sha512-HJ0IQFqcTsTiqbEgiuioYFMSD00TP6Cz7zoTti+zVVBwVe9fEhev9cH6WnM3XU31+ABS356durAb99ZuOthnKw==",
       "funding": [
         {
           "type": "opencollective",
           "url": "https://opencollective.com/sequelize"
         }
       ],
+      "license": "MIT",
       "dependencies": {
         "@types/debug": "^4.1.8",
         "@types/validator": "^13.7.17",
@@ -440,9 +442,9 @@
       "integrity": "sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw=="
     },
     "dottie": {
-      "version": "2.0.6",
-      "resolved": "https://registry.npmjs.org/dottie/-/dottie-2.0.6.tgz",
-      "integrity": "sha512-iGCHkfUc5kFekGiqhe8B/mdaurD+lakO9txNnTvKtA6PISrw86LgqHvRzWYPyoE2Ph5aMIrCw9/uko6XHTKCwA=="
+      "version": "2.0.7",
+      "resolved": "https://registry.npmjs.org/dottie/-/dottie-2.0.7.tgz",
+      "integrity": "sha512-7lAK2A0b3zZr3UC5aE69CPdCFR4RHW1o2Dr74TqFykxkUCBXSRJum/yPc7g8zRHJqWKomPLHwFLLoUnn8PXXRg=="
     },
     "generate-function": {
       "version": "2.3.1",
@@ -564,9 +566,9 @@
       "integrity": "sha512-hr3Wtp/GZIc/6DAGPDcV4/9WoZhjrkXsi5B/07QgX8tsdc6ilr7BFM6PM6rbdAX1kFSDYeZGLipIZZKyQP0O5Q=="
     },
     "sequelize": {
-      "version": "6.37.7",
-      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.37.7.tgz",
-      "integrity": "sha512-mCnh83zuz7kQxxJirtFD7q6Huy6liPanI67BSlbzSYgVNl5eXVdE2CN1FuAeZwG1SNpGsNRCV+bJAVVnykZAFA==",
+      "version": "6.37.8",
+      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.37.8.tgz",
+      "integrity": "sha512-HJ0IQFqcTsTiqbEgiuioYFMSD00TP6Cz7zoTti+zVVBwVe9fEhev9cH6WnM3XU31+ABS356durAb99ZuOthnKw==",
       "requires": {
         "@types/debug": "^4.1.8",
         "@types/validator": "^13.7.17",
