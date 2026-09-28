@@ -1,18 +1,18 @@
 {
   "name": "thorin-store-sql",
-  "version": "2.3.38",
+  "version": "2.3.40",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "thorin-store-sql",
-      "version": "2.3.38",
+      "version": "2.3.40",
       "license": "MIT",
       "dependencies": {
         "camelcase": "6.3.0",
         "camelize": "1.0.0",
         "decamelize": "4.0.0",
-        "mysql2": "^3.16.2",
+        "mysql2": "^3.24.4",
         "sequelize": "^6.37.8"
       }
     },
@@ -90,14 +90,6 @@
         "url": "https://github.com/sponsors/sindresorhus"
       }
     },
-    "node_modules/denque": {
-      "version": "2.1.0",
-      "resolved": "https://registry.npmjs.org/denque/-/denque-2.1.0.tgz",
-      "integrity": "sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==",
-      "engines": {
-        "node": ">=0.10"
-      }
-    },
     "node_modules/dottie": {
       "version": "2.0.7",
       "resolved": "https://registry.npmjs.org/dottie/-/dottie-2.0.7.tgz",
@@ -113,9 +105,9 @@
       }
     },
     "node_modules/iconv-lite": {
-      "version": "0.7.2",
-      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.2.tgz",
-      "integrity": "sha512-im9DjEDQ55s9fL4EYzOAv0yMqmMBSZp6G0VvFyTMPKWxiSBHUj9NW/qqLmXUwXrrM7AvqSlTCfvqRb0cM8yYqw==",
+      "version": "0.7.3",
+      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.3.tgz",
+      "integrity": "sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==",
       "license": "MIT",
       "dependencies": {
         "safer-buffer": ">= 2.1.2 < 3.0.0"
@@ -165,9 +157,9 @@
       }
     },
     "node_modules/lru.min": {
-      "version": "1.1.3",
-      "resolved": "https://registry.npmjs.org/lru.min/-/lru.min-1.1.3.tgz",
-      "integrity": "sha512-Lkk/vx6ak3rYkRR0Nhu4lFUT2VDnQSxBe8Hbl7f36358p6ow8Bnvr8lrLt98H8J1aGxfhbX4Fs5tYg2+FTwr5Q==",
+      "version": "1.1.5",
+      "resolved": "https://registry.npmjs.org/lru.min/-/lru.min-1.1.5.tgz",
+      "integrity": "sha512-5J9ysMYUpYIg9RF2vJpy9SinEmSviFSe0GyPpCQ4L5QSkLAgeLXlTAOu2ZwWUU5m+0SBl6gUU1R1ZQB3aKypfA==",
       "license": "MIT",
       "engines": {
         "bun": ">=1.0.0",
@@ -204,23 +196,24 @@
       "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
     },
     "node_modules/mysql2": {
-      "version": "3.16.2",
-      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.16.2.tgz",
-      "integrity": "sha512-JsqBpYNy7pH20lGfPuSyRSIcCxSeAIwxWADpV64nP9KeyN3ZKpHZgjKXuBKsh7dH6FbOvf1bOgoVKjSUPXRMTw==",
+      "version": "3.24.4",
+      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.24.4.tgz",
+      "integrity": "sha512-A2olluVlj0mvgyIRRISMEzXc51m+21mRtcMVjJyIpt2GG98+XrC9m9HzsqcMsX2LcnfccJvY5NB22g8fENBnOA==",
       "license": "MIT",
       "dependencies": {
         "aws-ssl-profiles": "^1.1.2",
-        "denque": "^2.1.0",
         "generate-function": "^2.3.1",
-        "iconv-lite": "^0.7.2",
+        "iconv-lite": "^0.7.3",
         "long": "^5.3.2",
-        "lru.min": "^1.1.3",
+        "lru.min": "^1.1.4",
         "named-placeholders": "^1.1.6",
-        "seq-queue": "^0.0.5",
-        "sqlstring": "^2.3.3"
+        "sql-escaper": "^1.5.1"
       },
       "engines": {
         "node": ">= 8.0"
+      },
+      "peerDependencies": {
+        "@types/node": ">= 8"
       }
     },
     "node_modules/named-placeholders": {
@@ -264,11 +257,6 @@
       "engines": {
         "node": ">=10"
       }
-    },
-    "node_modules/seq-queue": {
-      "version": "0.0.5",
-      "resolved": "https://registry.npmjs.org/seq-queue/-/seq-queue-0.0.5.tgz",
-      "integrity": "sha512-hr3Wtp/GZIc/6DAGPDcV4/9WoZhjrkXsi5B/07QgX8tsdc6ilr7BFM6PM6rbdAX1kFSDYeZGLipIZZKyQP0O5Q=="
     },
     "node_modules/sequelize": {
       "version": "6.37.8",
@@ -340,12 +328,19 @@
         "node": ">= 10.0.0"
       }
     },
-    "node_modules/sqlstring": {
-      "version": "2.3.3",
-      "resolved": "https://registry.npmjs.org/sqlstring/-/sqlstring-2.3.3.tgz",
-      "integrity": "sha512-qC9iz2FlN7DQl3+wjwn3802RTyjCx7sDvfQEXchwa6CWOx07/WVfh91gBmQ9fahw8snwGEWU3xGzOt4tFyHLxg==",
+    "node_modules/sql-escaper": {
+      "version": "1.5.2",
+      "resolved": "https://registry.npmjs.org/sql-escaper/-/sql-escaper-1.5.2.tgz",
+      "integrity": "sha512-6CKD38c31SENivxOADeMNLdukOnUxUcflKtzVWzace7Riv1v7cAEym5Cx9Q7gYZ3ezIJI7ZpqecQq8cqNeSSFg==",
+      "license": "MIT",
       "engines": {
-        "node": ">= 0.6"
+        "bun": ">=1.0.0",
+        "deno": ">=2.0.0",
+        "node": ">=12.0.0"
+      },
+      "funding": {
+        "type": "github",
+        "url": "https://github.com/mysqljs/sql-escaper?sponsor=1"
       }
     },
     "node_modules/toposort-class": {
@@ -436,11 +431,6 @@
       "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-4.0.0.tgz",
       "integrity": "sha512-9iE1PgSik9HeIIw2JO94IidnE3eBoQrFJ3w7sFuzSX4DpmZ3v5sZpUiV5Swcf6mQEF+Y0ru8Neo+p+nyh2J+hQ=="
     },
-    "denque": {
-      "version": "2.1.0",
-      "resolved": "https://registry.npmjs.org/denque/-/denque-2.1.0.tgz",
-      "integrity": "sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw=="
-    },
     "dottie": {
       "version": "2.0.7",
       "resolved": "https://registry.npmjs.org/dottie/-/dottie-2.0.7.tgz",
@@ -455,9 +445,9 @@
       }
     },
     "iconv-lite": {
-      "version": "0.7.2",
-      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.2.tgz",
-      "integrity": "sha512-im9DjEDQ55s9fL4EYzOAv0yMqmMBSZp6G0VvFyTMPKWxiSBHUj9NW/qqLmXUwXrrM7AvqSlTCfvqRb0cM8yYqw==",
+      "version": "0.7.3",
+      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.3.tgz",
+      "integrity": "sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==",
       "requires": {
         "safer-buffer": ">= 2.1.2 < 3.0.0"
       }
@@ -491,9 +481,9 @@
       }
     },
     "lru.min": {
-      "version": "1.1.3",
-      "resolved": "https://registry.npmjs.org/lru.min/-/lru.min-1.1.3.tgz",
-      "integrity": "sha512-Lkk/vx6ak3rYkRR0Nhu4lFUT2VDnQSxBe8Hbl7f36358p6ow8Bnvr8lrLt98H8J1aGxfhbX4Fs5tYg2+FTwr5Q=="
+      "version": "1.1.5",
+      "resolved": "https://registry.npmjs.org/lru.min/-/lru.min-1.1.5.tgz",
+      "integrity": "sha512-5J9ysMYUpYIg9RF2vJpy9SinEmSviFSe0GyPpCQ4L5QSkLAgeLXlTAOu2ZwWUU5m+0SBl6gUU1R1ZQB3aKypfA=="
     },
     "moment": {
       "version": "2.29.4",
@@ -514,19 +504,17 @@
       "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
     },
     "mysql2": {
-      "version": "3.16.2",
-      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.16.2.tgz",
-      "integrity": "sha512-JsqBpYNy7pH20lGfPuSyRSIcCxSeAIwxWADpV64nP9KeyN3ZKpHZgjKXuBKsh7dH6FbOvf1bOgoVKjSUPXRMTw==",
+      "version": "3.24.4",
+      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.24.4.tgz",
+      "integrity": "sha512-A2olluVlj0mvgyIRRISMEzXc51m+21mRtcMVjJyIpt2GG98+XrC9m9HzsqcMsX2LcnfccJvY5NB22g8fENBnOA==",
       "requires": {
         "aws-ssl-profiles": "^1.1.2",
-        "denque": "^2.1.0",
         "generate-function": "^2.3.1",
-        "iconv-lite": "^0.7.2",
+        "iconv-lite": "^0.7.3",
         "long": "^5.3.2",
-        "lru.min": "^1.1.3",
+        "lru.min": "^1.1.4",
         "named-placeholders": "^1.1.6",
-        "seq-queue": "^0.0.5",
-        "sqlstring": "^2.3.3"
+        "sql-escaper": "^1.5.1"
       }
     },
     "named-placeholders": {
@@ -560,11 +548,6 @@
         "lru-cache": "^6.0.0"
       }
     },
-    "seq-queue": {
-      "version": "0.0.5",
-      "resolved": "https://registry.npmjs.org/seq-queue/-/seq-queue-0.0.5.tgz",
-      "integrity": "sha512-hr3Wtp/GZIc/6DAGPDcV4/9WoZhjrkXsi5B/07QgX8tsdc6ilr7BFM6PM6rbdAX1kFSDYeZGLipIZZKyQP0O5Q=="
-    },
     "sequelize": {
       "version": "6.37.8",
       "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.37.8.tgz",
@@ -593,10 +576,10 @@
       "resolved": "https://registry.npmjs.org/sequelize-pool/-/sequelize-pool-7.1.0.tgz",
       "integrity": "sha512-G9c0qlIWQSK29pR/5U2JF5dDQeqqHRragoyahj/Nx4KOOQ3CPPfzxnfqFPCSB7x5UgjOgnZ61nSxz+fjDpRlJg=="
     },
-    "sqlstring": {
-      "version": "2.3.3",
-      "resolved": "https://registry.npmjs.org/sqlstring/-/sqlstring-2.3.3.tgz",
-      "integrity": "sha512-qC9iz2FlN7DQl3+wjwn3802RTyjCx7sDvfQEXchwa6CWOx07/WVfh91gBmQ9fahw8snwGEWU3xGzOt4tFyHLxg=="
+    "sql-escaper": {
+      "version": "1.5.2",
+      "resolved": "https://registry.npmjs.org/sql-escaper/-/sql-escaper-1.5.2.tgz",
+      "integrity": "sha512-6CKD38c31SENivxOADeMNLdukOnUxUcflKtzVWzace7Riv1v7cAEym5Cx9Q7gYZ3ezIJI7ZpqecQq8cqNeSSFg=="
     },
     "toposort-class": {
       "version": "1.0.1",
