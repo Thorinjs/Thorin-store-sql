@@ -1,18 +1,18 @@
 {
   "name": "thorin-store-sql",
-  "version": "2.3.40",
+  "version": "2.3.41",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "thorin-store-sql",
-      "version": "2.3.40",
+      "version": "2.3.41",
       "license": "MIT",
       "dependencies": {
         "camelcase": "6.3.0",
         "camelize": "1.0.0",
         "decamelize": "4.0.0",
-        "mysql2": "^3.24.4",
+        "mysql2": "^3.24.6",
         "sequelize": "^6.37.8"
       }
     },
@@ -172,9 +172,10 @@
       }
     },
     "node_modules/moment": {
-      "version": "2.29.4",
-      "resolved": "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz",
-      "integrity": "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==",
+      "version": "2.31.0",
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.31.0.tgz",
+      "integrity": "sha512-0acOTfMiWOheYS4eoWb80yYMb/JLvVv9SHbs2PehaDzfUG0Bw855SKyk0IKTnPGa5+U2bmi3W68l1+sGLX/pvw==",
+      "license": "MIT",
       "engines": {
         "node": "*"
       }
@@ -196,9 +197,9 @@
       "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
     },
     "node_modules/mysql2": {
-      "version": "3.24.4",
-      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.24.4.tgz",
-      "integrity": "sha512-A2olluVlj0mvgyIRRISMEzXc51m+21mRtcMVjJyIpt2GG98+XrC9m9HzsqcMsX2LcnfccJvY5NB22g8fENBnOA==",
+      "version": "3.24.6",
+      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.24.6.tgz",
+      "integrity": "sha512-enu73KhbAua2L3dIxjc6qg6ZJ7H3pt1BImZASWNWY5xSsmJ1ZuUPULTDGXgmJbI61vb+nJAG19IZclIq19UidQ==",
       "license": "MIT",
       "dependencies": {
         "aws-ssl-profiles": "^1.1.2",
@@ -349,11 +350,16 @@
       "integrity": "sha512-OsLcGGbYF3rMjPUf8oKktyvCiUxSbqMMS39m33MAjLTC1DVIH6x3WSt63/M77ihI09+Sdfk1AXvfhCEeUmC7mg=="
     },
     "node_modules/uuid": {
-      "version": "8.3.2",
-      "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
-      "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+      "version": "11.1.1",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-11.1.1.tgz",
+      "integrity": "sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==",
+      "funding": [
+        "https://github.com/sponsors/broofa",
+        "https://github.com/sponsors/ctavan"
+      ],
+      "license": "MIT",
       "bin": {
-        "uuid": "dist/bin/uuid"
+        "uuid": "dist/esm/bin/uuid"
       }
     },
     "node_modules/validator": {
@@ -486,9 +492,9 @@
       "integrity": "sha512-5J9ysMYUpYIg9RF2vJpy9SinEmSviFSe0GyPpCQ4L5QSkLAgeLXlTAOu2ZwWUU5m+0SBl6gUU1R1ZQB3aKypfA=="
     },
     "moment": {
-      "version": "2.29.4",
-      "resolved": "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz",
-      "integrity": "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w=="
+      "version": "2.31.0",
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.31.0.tgz",
+      "integrity": "sha512-0acOTfMiWOheYS4eoWb80yYMb/JLvVv9SHbs2PehaDzfUG0Bw855SKyk0IKTnPGa5+U2bmi3W68l1+sGLX/pvw=="
     },
     "moment-timezone": {
       "version": "0.5.43",
@@ -504,9 +510,9 @@
       "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
     },
     "mysql2": {
-      "version": "3.24.4",
-      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.24.4.tgz",
-      "integrity": "sha512-A2olluVlj0mvgyIRRISMEzXc51m+21mRtcMVjJyIpt2GG98+XrC9m9HzsqcMsX2LcnfccJvY5NB22g8fENBnOA==",
+      "version": "3.24.6",
+      "resolved": "https://registry.npmjs.org/mysql2/-/mysql2-3.24.6.tgz",
+      "integrity": "sha512-enu73KhbAua2L3dIxjc6qg6ZJ7H3pt1BImZASWNWY5xSsmJ1ZuUPULTDGXgmJbI61vb+nJAG19IZclIq19UidQ==",
       "requires": {
         "aws-ssl-profiles": "^1.1.2",
         "generate-function": "^2.3.1",
@@ -566,7 +572,7 @@
         "semver": "^7.5.4",
         "sequelize-pool": "^7.1.0",
         "toposort-class": "^1.0.1",
-        "uuid": "^8.3.2",
+        "uuid": "^11.1.1",
         "validator": "^13.9.0",
         "wkx": "^0.5.0"
       }
@@ -587,9 +593,9 @@
       "integrity": "sha512-OsLcGGbYF3rMjPUf8oKktyvCiUxSbqMMS39m33MAjLTC1DVIH6x3WSt63/M77ihI09+Sdfk1AXvfhCEeUmC7mg=="
     },
     "uuid": {
-      "version": "8.3.2",
-      "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
-      "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
+      "version": "11.1.1",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-11.1.1.tgz",
+      "integrity": "sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ=="
     },
     "validator": {
       "version": "13.15.23",
